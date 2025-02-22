@@ -1003,8 +1003,7 @@ void ASChipImpl_nativePostCreate(ASChipImpl *self) {
   self->parentLL_ = (id<ASHasWidgets>) cast_check(ASWidgetFactory_createWidgetWithNSString_withNSString_withASHasWidgets_withBoolean_(ASLinearLayoutImpl_LOCAL_NAME, ASLinearLayoutImpl_GROUP_NAME, self, false), ASHasWidgets_class_());
   [((id<ASHasWidgets>) nil_chk(self->parentLL_)) setAttributeWithNSString:@"layout_width" withId:@"match_parent" withBoolean:false];
   id<ASIWidget> iconWidget = ASWidgetFactory_createWidgetWithNSString_withNSString_withASHasWidgets_withBoolean_(@"ImageView", @"ImageView", self->parentLL_, false);
-  [((id<ASIWidget>) nil_chk(iconWidget)) setAttributeWithNSString:@"src" withId:@"@drawable/cross3" withBoolean:false];
-  [iconWidget setAttributeWithNSString:@"layout_width" withId:@"24dp" withBoolean:false];
+  [((id<ASIWidget>) nil_chk(iconWidget)) setAttributeWithNSString:@"layout_width" withId:@"24dp" withBoolean:false];
   [iconWidget setAttributeWithNSString:@"layout_height" withId:@"24dp" withBoolean:false];
   [iconWidget setVisibleWithBoolean:false];
   id<ASIWidget> checkboxWidget = ASWidgetFactory_createWidgetWithNSString_withNSString_withASHasWidgets_withBoolean_(@"ImageView", @"ImageView", self->parentLL_, false);

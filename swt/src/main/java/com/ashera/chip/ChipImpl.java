@@ -1109,7 +1109,6 @@ public java.util.Map<String, Object> getOnClickEventObj(View v) {
         parentLL.setAttribute("layout_width", "match_parent", false);
         
         IWidget iconWidget = WidgetFactory.createWidget("ImageView", "ImageView", parentLL, false);
-        iconWidget.setAttribute("src", "@drawable/cross3", false);
         iconWidget.setAttribute("layout_width", "24dp", false);
         iconWidget.setAttribute("layout_height", "24dp", false);
         iconWidget.setVisible(false);
