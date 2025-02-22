@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.chip"
+        version="1.0">
+
+  <name>CordovaChipPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaChipPlugin">
+        <param name="android-package" value="com.ashera.chip.CordovaChipPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="android/src/com/ashera/chip/ChipGroupImpl.java" target-dir="src/com/ashera/chip"/>
+     <source-file src="android/src/com/ashera/chip/ChipImpl.java" target-dir="src/com/ashera/chip"/>
+     <source-file src="android/src/com/ashera/chip/ChipPlugin.java" target-dir="src/com/ashera/chip"/>
+     <source-file src="android/src/com/ashera/chip/CordovaChipPlugin.java" target-dir="src/com/ashera/chip"/>
+     <!-- src end -->
+     <!-- start res -->
+     <source-file src="android/res/drawable-xxxhdpi/chip_icon_checked.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="android/res/drawable-xxxhdpi/chip_icon_close.png" target-dir="res/drawable-xxxhdpi"/>
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="android/tsc/src/android/widget/ChipGroupImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="android/tsc/src/android/widget/ChipImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="com.ashera.chip.ios">
+        	<param name="ios-package" value="CordovaChipPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/ios/src/ChipGroupImpl.h" target-dir="Chip/ios/src"/>
+     <source-file src="ios/ios/src/ChipGroupImpl.m" target-dir="Chip/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ChipImpl.h" target-dir="Chip/ios/src"/>
+     <source-file src="ios/ios/src/ChipImpl.m" target-dir="Chip/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ChipPlugin.h" target-dir="Chip/ios/src"/>
+     <source-file src="ios/ios/src/ChipPlugin.m" target-dir="Chip/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CordovaChipPlugin.h" target-dir="Chip/ios/src"/>
+     <source-file src="ios/ios/src/CordovaChipPlugin.m" target-dir="Chip/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="ios/tsc/src/ios/widget/ChipGroupImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="ios/tsc/src/ios/widget/ChipImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="CordovaChipPlugin">
+        <param name="android-package" value="com.ashera.chip.CordovaChipPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+	<framework src="browser/core.gradle" custom="true" type="gradleReference" />
+   	 <!-- start src -->
+     <!-- src end -->
+     <!-- start res -->
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="browser/tsc/src/web/widget/ChipGroupImpl.ts" target-dir="tsc/src/web/widget"/>
+     <source-file src="browser/tsc/src/web/widget/ChipImpl.ts" target-dir="tsc/src/web/widget"/>
+     <!-- tsc end -->
+     
+   	<js-module src="browser/www/js/add_res.js" name="coreAddRes">
+    	 <runs/>
+  	</js-module>
+  	<resource-file src="browser/www/css/chip.css" target="../../src/main/assets/www/css/chip.css" />
+     
+  </platform>
+  <platform name="swt">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaChipPlugin">
+        <param name="android-package" value="com.ashera.chip.CordovaChipPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+	<framework src="swt/core.gradle" custom="true" type="gradleReference" />
+   	 <!-- start src -->
+     <!-- src end -->
+     <!-- start res -->
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="swt/tsc/src/swt/widget/ChipGroupImpl.ts" target-dir="tsc/src/swt/widget"/>
+     <source-file src="swt/tsc/src/swt/widget/ChipImpl.ts" target-dir="tsc/src/swt/widget"/>
+     <!-- tsc end -->
+  </platform>
+
+
+
+
+
+</plugin>

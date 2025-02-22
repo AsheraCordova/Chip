@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.chip.web"
+        version="1.0">
+
+  <name>CordovaChipPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="CordovaChipPlugin">
+        <param name="android-package" value="com.ashera.chip.CordovaChipPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+	<framework src="core.gradle" custom="true" type="gradleReference" />
+   	 <!-- start src -->
+     <!-- src end -->
+     <!-- start res -->
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="tsc/src/web/widget/ChipGroupImpl.ts" target-dir="tsc/src/web/widget"/>
+     <source-file src="tsc/src/web/widget/ChipImpl.ts" target-dir="tsc/src/web/widget"/>
+     <!-- tsc end -->
+     
+   	<js-module src="www/js/add_res.js" name="coreAddRes">
+    	 <runs/>
+  	</js-module>
+  	<resource-file src="www/css/chip.css" target="../../src/main/assets/www/css/chip.css" />
+     
+  </platform>
+
+
+</plugin>

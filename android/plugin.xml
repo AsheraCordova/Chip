@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.chip"
+        version="1.0">
+
+  <name>CordovaChipPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaChipPlugin">
+        <param name="android-package" value="com.ashera.chip.CordovaChipPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="src/com/ashera/chip/ChipGroupImpl.java" target-dir="src/com/ashera/chip"/>
+     <source-file src="src/com/ashera/chip/ChipImpl.java" target-dir="src/com/ashera/chip"/>
+     <source-file src="src/com/ashera/chip/ChipPlugin.java" target-dir="src/com/ashera/chip"/>
+     <source-file src="src/com/ashera/chip/CordovaChipPlugin.java" target-dir="src/com/ashera/chip"/>
+     <!-- src end -->
+     <!-- start res -->
+     <source-file src="res/drawable-xxxhdpi/chip_icon_checked.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="res/drawable-xxxhdpi/chip_icon_close.png" target-dir="res/drawable-xxxhdpi"/>
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="tsc/src/android/widget/ChipGroupImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/ChipImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+
+
+</plugin>
