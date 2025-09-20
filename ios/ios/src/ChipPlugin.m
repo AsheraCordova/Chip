@@ -3,11 +3,22 @@
 //  source: D:\Java\git\core-ios-widgets\IOSChipPlugin\src\main\java\com\ashera\chip\ChipPlugin.java
 //
 
+#define J2OBJC_IMPORTED_BY_JAVA_IMPLEMENTATION 1
+
+
+
+
 #include "ChipGroupImpl.h"
 #include "ChipImpl.h"
 #include "ChipPlugin.h"
 #include "J2ObjC_source.h"
 #include "WidgetFactory.h"
+
+
+
+
+#pragma clang diagnostic error "-Wreturn-type"
+#pragma clang diagnostic ignored "-Wswitch"
 
 
 @implementation ASChipPlugin
@@ -59,3 +70,5 @@ void ASChipPlugin_initPlugin() {
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASChipPlugin)
+
+J2OBJC_NAME_MAPPING(ASChipPlugin, "com.ashera.chip", "AS")

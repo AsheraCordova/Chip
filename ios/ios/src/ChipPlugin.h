@@ -3,6 +3,7 @@
 //  source: D:\Java\git\core-ios-widgets\IOSChipPlugin\src\main\java\com\ashera\chip\ChipPlugin.java
 //
 
+#import <Foundation/Foundation.h>
 #include "J2ObjC_header.h"
 
 #pragma push_macro("INCLUDE_ALL_ChipPlugin")
@@ -39,6 +40,7 @@ FOUNDATION_EXPORT void ASChipPlugin_initPlugin(void);
 J2OBJC_TYPE_LITERAL_HEADER(ASChipPlugin)
 
 @compatibility_alias ComAsheraChipChipPlugin ASChipPlugin;
+
 
 #endif
 
