@@ -75,7 +75,7 @@
    	<js-module src="browser/www/js/add_res.js" name="coreAddRes">
     	 <runs/>
   	</js-module>
-  	<resource-file src="browser/www/css/chip.css" target="../../src/main/assets/www/css/chip.css" />
+  	<asset src="browser/www/css/chip.css" target="css/chip.css" />
      
   </platform>
   <platform name="swt">

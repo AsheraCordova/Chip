@@ -29,7 +29,7 @@
    	<js-module src="www/js/add_res.js" name="coreAddRes">
     	 <runs/>
   	</js-module>
-  	<resource-file src="www/css/chip.css" target="../../src/main/assets/www/css/chip.css" />
+  	<asset src="www/css/chip.css" target="css/chip.css" />
      
   </platform>
 
