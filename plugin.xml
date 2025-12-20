@@ -34,7 +34,7 @@
   </platform>
   <platform name="ios">
     <config-file target="config.xml" parent="/widget">
-      <feature name="com.ashera.chip.ios">
+      <feature name="CordovaChipPlugin">
         	<param name="ios-package" value="CordovaChipPlugin" />
          	<param name="onload" value="true" />
       </feature>
